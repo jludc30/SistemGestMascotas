@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Perro extends Mascota{
@@ -7,15 +9,18 @@ public class Perro extends Mascota{
     private int idPerro;
     private static int contador;
     private String raza;
-
+    public static List<Perro> perros = new ArrayList<>();
 
     public Perro(int edad, String especie, String nombre, String raza){
         super(edad, especie, nombre);
         
         ++Perro.contador;
         
+        
         this.raza = raza;
         this.idPerro = Perro.contador;
+        
+        Perro.perros.add(this);
     }
     
     public void jugar(){

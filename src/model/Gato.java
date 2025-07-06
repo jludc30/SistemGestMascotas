@@ -9,12 +9,12 @@ public class Gato extends Mascota {
     private int idGato;
     private static int contador;
     private String raza;
-    public static List<Gato> gatos = new ArrayList<>();
 
     public Gato(int edad, String especie, String nombre, String raza) {
         super(edad, especie, nombre);
         ++contador;
         idGato = contador;
+        this.raza = raza;
     }
 
     public void salta(String name){
