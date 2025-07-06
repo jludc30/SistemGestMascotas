@@ -9,16 +9,29 @@ public class Persona {
     private static int contador = 0;
     private int id;
     private String nombre;
+    private String apellido;
+    private int edad;
     public List<Mascota> misMascotas = new ArrayList<>();
 
+    
     private Persona(){
         ++this.contador;
         this.id = this.contador;
     }
     
-    public Persona(String nombre){
+    public Persona(String nombre, String apellido, int edad){
         this();
         this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public int getEdad() {
+        return edad;
     }
     
     public String getNombre(){
