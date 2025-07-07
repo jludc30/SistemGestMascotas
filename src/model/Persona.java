@@ -26,6 +26,10 @@ public class Persona {
         this.edad = edad;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getApellido() {
         return apellido;
     }
@@ -40,8 +44,17 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "id=" + id + ", nombre=" + nombre + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Persona{");
+        sb.append("id=").append(id);
+        sb.append(", nombre=").append(nombre);
+        sb.append(", apellido=").append(apellido);
+        sb.append(", edad=").append(edad);
+        sb.append('}');
+        return sb.toString();
     }
+
+
 
     @Override
     public int hashCode() {
